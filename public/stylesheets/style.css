@@ -1,0 +1,16 @@
+body {
+	font-family: 'Cabin', sans-serif;
+}
+.container {
+	margin-left:10%;
+	margin-right:10%;
+}
+h1 {
+	text-align:right;
+}
+#section_top_hr {
+	margin-top:3%;
+}
+.wtf_is {
+	margin-bottom:3%;
+}

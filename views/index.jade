@@ -1,0 +1,38 @@
+extends layout
+
+block header
+	include ./header.jade
+
+block content
+	div.container#wtf_is_container
+		div.wtf_is
+			h2 wtf is 
+				a(href='/node') node
+				??
+			div.container 
+				h3 = #{node_details}
+		div.wtf_is		
+			h2 wtf is 
+				a(href='/express') express
+				??
+			div.container 
+				h3 = #{express_details}
+		div.wtf_is
+			h2 wtf is 
+				a(href='/jade') jade
+				??			
+			div.container 
+				h3 = #{jade_details}
+		
+		hr 
+		// new section
+		h2#tests_heading jade iteration, interpolation
+		div.container
+			li
+				h3 I've passed in an array: [#{tech_stack}]
+			li
+				h3 looping through -- 
+					ul
+						each val in tech_stack
+							li= val
+				
