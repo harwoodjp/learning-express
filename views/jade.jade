@@ -11,7 +11,7 @@ block content
 				a(href='https://en.wikipedia.org/wiki/Comparison_of_web_template_engines') wiki
 
 		hr 
-		// new section
+		// loop section
 		h2#tests_heading iteration, interpolation
 		div.container
 			li
@@ -21,4 +21,16 @@ block content
 					ol
 						each val in tech_stack
 							li= val
-				
+		
+		hr
+		h2#tests_heading submitting a form
+		div.container
+			form(method="GET", action="/jade/form")
+				p first name 
+					input(type="text" name="f_name" value="#{f_name}")
+				p last name 
+					input(type="text" name="l_name" value="#{l_name}")
+				p fav color 
+					input(type="text" name="color" value="#{color}")
+				p
+					input(type="submit")
