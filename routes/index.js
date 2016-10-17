@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 	res.render('index', { 
 		title: title ,
 		node_details : 'a server side javascript environment',
-		express_details : 'a mvc framework for node',
+		express_details : 'a web application framework for node',
 		jade_details : 'a node template engine'	,
 		tech_stack : tech_stack
 	});
