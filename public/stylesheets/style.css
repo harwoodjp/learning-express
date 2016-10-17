@@ -8,6 +8,9 @@ body {
 h1 {
 	text-align:right;
 }
+#index_intro {
+	text-align: center;
+}
 #section_top_hr {
 	margin-top:3%;
 }

@@ -10,3 +10,15 @@ block content
 			li 
 				a(href='https://en.wikipedia.org/wiki/Comparison_of_web_template_engines') wiki
 
+		hr 
+		// new section
+		h2#tests_heading iteration, interpolation
+		div.container
+			li
+				h3 I've passed in an array: [#{tech_stack}]
+			li
+				h3 looping through -- 
+					ol
+						each val in tech_stack
+							li= val
+				

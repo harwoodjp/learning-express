@@ -5,6 +5,8 @@ block header
 
 block content
 	div.container#wtf_is_container
+		h2#index_intro a "hello world" introduction to node, express, jade
+		<hr>
 		div.wtf_is
 			h2 wtf is 
 				a(href='/node') node
@@ -24,15 +26,3 @@ block content
 			div.container 
 				h3 = #{jade_details}
 		
-		hr 
-		// new section
-		h2#tests_heading jade iteration, interpolation
-		div.container
-			li
-				h3 I've passed in an array: [#{tech_stack}]
-			li
-				h3 looping through -- 
-					ul
-						each val in tech_stack
-							li= val
-				
