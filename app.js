@@ -10,7 +10,9 @@ var users = require('./routes/users');
 var node = require('./routes/node');
 var express_r = require('./routes/express');
 var jade_r = require('./routes/jade');
+var mysql_test = require('./routes/mysql_test');
 
+var mysql = require('mysql');
 var app = express();
 
 // view engine setup
@@ -30,6 +32,7 @@ app.use('/users', users);
 app.use('/node', node);
 app.use('/express', express_r);
 app.use('/jade', jade_r);
+app.use('/mysql_test', mysql_test);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

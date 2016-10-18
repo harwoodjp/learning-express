@@ -7,9 +7,9 @@ var f_name=''; var l_name=''; var color='';
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-	if (req.param("f_name") != null) {f_name = req.param("f_name")} else {f_name = '';}
-	if (req.param("l_name") != null) {l_name = req.param("l_name")} else {l_name = '';}
-	if (req.param("color") != null) {color = req.param("color")} else {color = '';}
+	if (req.query.f_name != null) {f_name = req.query.f_name } else {f_name = '';}
+	if (req.query.l_name != null) {l_name = req.query.l_name} else {l_name = '';}
+	if (req.query.color != null) {color = req.query.color} else {color = '';}
 
 	res.render('jade', { 
 		title: title,

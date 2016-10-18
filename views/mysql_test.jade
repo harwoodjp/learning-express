@@ -1,0 +1,12 @@
+extends layout
+block header
+	include ./header.jade	
+block content
+	div.container
+		h2 mysql test - read + create,update,delete data
+		<hr>
+		ul
+			each val in result
+				li= val.title
+					ul
+						p= val.body
