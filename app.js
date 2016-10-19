@@ -34,6 +34,31 @@ app.use('/express', express_r);
 app.use('/jade', jade_r);
 app.use('/mysql_test', mysql_test);
 
+app.post('/mysql_test/add_blog_post', function(req, res) {
+  var author = req.body.author;
+  var date = req.body.date;
+  var title = req.body.title;
+  var body = req.body.body;
+  var blog_insert_query = "insert into 332project.blog(author,date,title,body) values(";
+  blog_insert_query += ("'"+author+"'"+","); blog_insert_query += ("'"+date+"'"+","); blog_insert_query += ("'"+title+"'"+","); blog_insert_query += ("'"+body+"'"+")");
+  console.log(blog_insert_query);
+
+  var connection = mysql.createConnection({
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASS
+      
+  });
+connection.connect(function(err) { /*error?*/ });
+var result;
+var query = connection.query(blog_insert_query, function(err, result) {
+  res.redirect('/mysql_test');
+});
+console.log(query.sql);
+
+
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

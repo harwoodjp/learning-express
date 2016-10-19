@@ -3,8 +3,33 @@ block header
 	include ./header.jade	
 block content
 	div.container
-		h2 mysql test - read + create,update,delete data
-		<hr>
+		h2 mysql test:
+		hr
+		h2 write data
+		form#add_blog_post(action="/mysql_test/add_blog_post" method="POST")
+			div#form_container
+				div#form_item
+					p author 
+						input(name="author")
+				div#form_item				
+					p date 
+						input(name="date")
+				div#form_item				
+					p title 
+						input(name="title")
+				div#form_item				
+					p body 
+						textarea(name="body")
+				div#form_item
+					p
+						input(type="submit")		
+
+
+
+
+
+		hr
+		h2 read data
 		ul
 			each val in result
 				li= val.title

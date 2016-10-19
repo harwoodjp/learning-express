@@ -1,9 +1,16 @@
+#add_blog_post p {
+	width:10%;
+}
 body {
 	font-family: 'Cabin', sans-serif;
 }
 .container {
 	margin-left:10%;
 	margin-right:10%;
+}
+#form_container {
+	display:flex;
+	flex-direction: row;
 }
 h1 {
 	text-align:right;
